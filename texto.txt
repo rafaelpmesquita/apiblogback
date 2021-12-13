@@ -1,0 +1,92 @@
+{
+    "Langs":[
+        {
+            
+            "Lang":"C++",
+            "img":"https://www.alura.com.br/artigos/assets/formacao-linguagem-c-plus-plus/img-01.png",
+            "desc":"C++ é uma linguagem de programação compilada multi-paradigma e de uso geral. Desde os anos 1990 é uma das linguagens comerciais mais populares, sendo bastante usada também na academia por seu grande desempenho e base de utilizadores."
+        },
+        {
+           
+            "Lang":"C#",
+            "img":"https://www.bairesdev.com/wp-content/uploads/2021/07/Csharp.svg",
+            "desc":"C# é uma linguagem de programação, multiparadigma, de tipagem forte, desenvolvida pela Microsoft como parte da plataforma .NET. A sua sintaxe orientada a objetos foi baseada no C++ mas inclui muitas influências de outras linguagens de programação, como Object Pascal e, principalmente, Java."
+        },
+        {
+            
+            "Lang":"Vue",
+            "img":"https://vuejs.org/images/logo.svg",
+            "desc":"Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única."
+        },
+        {
+            
+            "Lang":"Adonis",
+            "img":"https://avatars.githubusercontent.com/u/13810373?s=280&v=4",
+            "desc":"Adonis JS é um framework JavaScript muito poderoso, bastante parecido com o Laravel, que é voltado para a linguagem PHP. Ele também é baseado no conceito de MVC. Neste artigo vamos aprender como podemos usá-lo para criar uma API de cursos, tendo como base de dados um Banco PostgreSQL."
+        },
+        {
+            
+            "Lang":"Java",
+            "img":"https://dev.java/assets/images/java-logo-vert-blk.png",
+            "desc":"Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems. Em 2008 o Java foi adquirido pela empresa Oracle Corporation."
+        },
+        {
+            
+            "Lang":"Python",
+            "img":"https://www.tshirtgeek.com.br/wp-content/uploads/2021/03/com001.jpg",
+            "desc":"Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991"
+        }
+    ],
+    "navBar":[
+        {
+            "texto":"Sobre mim",
+            "rota":"/sobre"
+        },
+        {
+            "texto":"TimeLine",
+            "rota":"/tl"
+        },
+        {
+            "texto":"Conhecimentos",
+            "rota":"/conhecimentos"
+        },
+        {
+            "texto":"Contato",
+            "rota":"/contact"
+        }
+    ],
+    "timeLine":[
+        {
+            "titulo":"2019",
+            "desc":"Ano que me formei na escola pelo Coleguium",
+            "lado":"esq"
+        },
+        {
+            "titulo":"2020",
+            "desc":"Ano que iniciei a faculdade de Ciência da computação na Puc Minas",
+            "lado":"dir"
+        },
+        {
+            "titulo":"Junho de 2020",
+            "desc":"Primeiro período finalizado",
+            "lado":"esq"
+        },
+        {
+            "titulo":"Dezembro de 2020",
+            "desc":"Segundo período finalizado",
+            "lado":"dir"
+        },
+        {
+            "titulo":"Junho de 2021",
+            "desc":"Começei meu estágio no grupo Otimiza e finalizei o terceiro período da faculdade",
+            "lado":"esq"
+        },
+        {
+            "titulo":"Hoje",
+            "desc":"Hoje estou no quarto período e trabalhando no grupo Otimiza.",
+            "lado":"dir"
+        }
+       
+    ]
+}
+

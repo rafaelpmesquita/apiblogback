@@ -1,0 +1,31 @@
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\bin\Debug\netcoreapp2.1\api.deps.json
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\bin\Debug\netcoreapp2.1\api.runtimeconfig.json
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\bin\Debug\netcoreapp2.1\api.runtimeconfig.dev.json
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\bin\Debug\netcoreapp2.1\api.dll
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\bin\Debug\netcoreapp2.1\api.pdb
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.csprojAssemblyReference.cache
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.csproj.CoreCompileInputs.cache
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cache
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cs
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.AssemblyInfoInputs.cache
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.AssemblyInfo.cs
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.RazorTargetAssemblyInfo.cache
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.dll
+C:\Users\rafael.mesquita\Desktop\Cursos\Vuejs\Bootcamp\api\obj\Debug\netcoreapp2.1\api.pdb
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\api.deps.json
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\api.runtimeconfig.json
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\api.runtimeconfig.dev.json
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\api.dll
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\bin\Debug\netcoreapp2.1\api.pdb
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.csprojAssemblyReference.cache
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.AssemblyInfoInputs.cache
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.AssemblyInfo.cs
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.csproj.CoreCompileInputs.cache
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cache
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cs
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.RazorTargetAssemblyInfo.cache
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.dll
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.pdb
+C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.genruntimeconfig.cache
