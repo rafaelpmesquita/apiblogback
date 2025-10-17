@@ -1,0 +1,16 @@
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\bin\Debug\net8.0\Blog.Infrastructure.deps.json
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\bin\Debug\net8.0\Blog.Infrastructure.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\bin\Debug\net8.0\Blog.Infrastructure.pdb
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\bin\Debug\net8.0\Blog.Domain.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\bin\Debug\net8.0\Blog.Domain.pdb
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.csproj.AssemblyReference.cache
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.AssemblyInfoInputs.cache
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.AssemblyInfo.cs
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.sourcelink.json
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Inf.4FB8A09A.Up2Date
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\refint\Blog.Infrastructure.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\Blog.Infrastructure.pdb
+C:\Projetos\Blog\apiblogback\src\Blog.Infrastructure\obj\Debug\net8.0\ref\Blog.Infrastructure.dll

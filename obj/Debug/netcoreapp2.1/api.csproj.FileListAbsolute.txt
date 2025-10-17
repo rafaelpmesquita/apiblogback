@@ -29,3 +29,13 @@ C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcore
 C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.dll
 C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.pdb
 C:\Users\reife\OneDrive\Área de Trabalho\Estágio\Projeto\api\obj\Debug\netcoreapp2.1\api.genruntimeconfig.cache
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.csproj.AssemblyReference.cache
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.AssemblyInfoInputs.cache
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.AssemblyInfo.cs
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.csproj.CoreCompileInputs.cache
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cache
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.RazorAssemblyInfo.cs
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.sourcelink.json
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.dll
+C:\Projetos\Blog\apiblogback\obj\Debug\netcoreapp2.1\api.pdb

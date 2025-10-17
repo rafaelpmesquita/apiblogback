@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\reife\\OneDrive\\Área de Trabalho\\Estágio\\Projeto\\api\\api.csproj": {}
+    "C:\\Projetos\\Blog\\apiblogback\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\reife\\OneDrive\\Área de Trabalho\\Estágio\\Projeto\\api\\api.csproj": {
+    "C:\\Projetos\\Blog\\apiblogback\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\reife\\OneDrive\\Área de Trabalho\\Estágio\\Projeto\\api\\api.csproj",
+        "projectUniqueName": "C:\\Projetos\\Blog\\apiblogback\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\reife\\OneDrive\\Área de Trabalho\\Estágio\\Projeto\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\reife\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\reife\\OneDrive\\Área de Trabalho\\Estágio\\Projeto\\api\\obj\\",
+        "projectPath": "C:\\Projetos\\Blog\\apiblogback\\api.csproj",
+        "packagesPath": "C:\\Users\\dtiDigital\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\Blog\\apiblogback\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\reife\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dtiDigital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://alm-animaeducacao.pkgs.visualstudio.com/_packaging/animacore/nuget/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/alm-animaeducacao/_packaging/animacore/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
@@ -34,7 +40,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netcoreapp2.1": {
@@ -76,11 +88,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

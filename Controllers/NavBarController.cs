@@ -16,10 +16,12 @@ namespace api.Controllers
         {
             _service = service;
         }
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<NavBar> Get()
         {
-            return _service.ListarTodos();
+            var tenant = Request.Headers["X-Tenant"].ToString();
+            return _service.ListarTodos(tenant);
         }
     
         [HttpGet("{id}")]
@@ -32,18 +34,23 @@ namespace api.Controllers
                 return NotFound();
         }
 
+        [Authorize]
         [HttpPost]
         public Resultado Post([FromBody] NavBar espec)
         {
-            return _service.Incluir(espec);
+            var tenant = Request.Headers["X-Tenant"].ToString();
+            return _service.Incluir(espec, tenant);
         }
 
+        [Authorize]
         [HttpPut]
         public Resultado Put([FromBody] NavBar espec)
         {
-            return _service.Atualizar(espec);
+            var tenant = Request.Headers["X-Tenant"].ToString();
+            return _service.Atualizar(espec, tenant);
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public Resultado Delete(Guid id)
         {

@@ -16,10 +16,12 @@ namespace api.Controllers
         {
             _serviceEspecialidade = service;
         }
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<Especialidades> Get()
         {
-            return _serviceEspecialidade.ListarTodos();
+            var tenant = Request.Headers["X-Tenant"].ToString();
+            return _serviceEspecialidade.ListarTodos(tenant);
         }
     
         [HttpGet("{id}")]
@@ -35,13 +37,15 @@ namespace api.Controllers
         [HttpPost]
         public Resultado Post([FromBody] Especialidades espec)
         {
-            return _serviceEspecialidade.Incluir(espec);
+            var tenant = Request.Headers["X-Tenant"].ToString();
+            return _serviceEspecialidade.Incluir(espec, tenant);
         }
 
         [HttpPut]
         public Resultado Put([FromBody] Especialidades espec)
         {
-            return _serviceEspecialidade.Atualizar(espec);
+            var tenant = Request.Headers["X-Tenant"].ToString();
+            return _serviceEspecialidade.Atualizar(espec, tenant);
         }
 
         [HttpDelete("{id}")]

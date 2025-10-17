@@ -24,6 +24,13 @@ namespace api.Models
             set => _rota = value?.Trim();
         }
         
+		// Multi-tenant segregation key (e.g., domain)
+		private string _tenant;
+		public string Tenant
+		{
+			get => _tenant;
+			set => _tenant = value?.Trim().ToLower();
+		}
 
     }
 }

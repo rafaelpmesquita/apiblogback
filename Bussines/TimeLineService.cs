@@ -27,12 +27,18 @@ namespace api.Business
                 return null;
         }
 
-        public IEnumerable<TimeLine> ListarTodos()
+        public IEnumerable<TimeLine> ListarTodos(string tenant = null)
         {
-            return _context.TimeLine.ToList();
+            var query = _context.TimeLine.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(tenant))
+            {
+                var t = tenant.Trim().ToLower();
+                query = query.Where(p => p.Tenant == t);
+            }
+            return query.ToList();
         }
 
-        public Resultado Incluir(TimeLine dadosTimeLine)
+        public Resultado Incluir(TimeLine dadosTimeLine, string tenant = null)
         {
             Resultado resultado = DadosValidos(dadosTimeLine);
             resultado.Acao = "Inclusão de TimeLine";
@@ -47,6 +53,10 @@ namespace api.Business
 
             if (resultado.Inconsistencias.Count == 0)
             {
+                if (!string.IsNullOrWhiteSpace(tenant))
+                {
+                    dadosTimeLine.Tenant = tenant.Trim().ToLower();
+                }
                 _context.TimeLine.Add(dadosTimeLine);
                 _context.SaveChanges();
             }
@@ -54,7 +64,7 @@ namespace api.Business
             return resultado;
         }
 
-        public Resultado Atualizar(TimeLine dadosTimeLine)
+        public Resultado Atualizar(TimeLine dadosTimeLine, string tenant = null)
         {
             Resultado resultado = DadosValidos(dadosTimeLine);
             resultado.Acao = "Atualização de TimeLine";
@@ -74,6 +84,10 @@ namespace api.Business
                 {
                     timeline.Desc = dadosTimeLine.Desc;
                     timeline.lado = dadosTimeLine.lado;
+                    if (!string.IsNullOrWhiteSpace(tenant))
+                    {
+                        timeline.Tenant = tenant.Trim().ToLower();
+                    }
                     _context.SaveChanges();
                 }
             }

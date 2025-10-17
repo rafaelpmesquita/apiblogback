@@ -27,13 +27,18 @@ namespace api.Business
                 return null;
         }
 
-        public IEnumerable<NavBar> ListarTodos()
+        public IEnumerable<NavBar> ListarTodos(string tenant = null)
         {
-            return _context.NavBar
-                .OrderBy(p => p.Id).ToList();
+            var query = _context.NavBar.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(tenant))
+            {
+                var t = tenant.Trim().ToLower();
+                query = query.Where(p => p.Tenant == t);
+            }
+            return query.OrderBy(p => p.Id).ToList();
         }
 
-        public Resultado Incluir(NavBar dadosNavBar)
+        public Resultado Incluir(NavBar dadosNavBar, string tenant = null)
         {
             Resultado resultado = DadosValidos(dadosNavBar);
             resultado.Acao = "Inclusão de NavBar";
@@ -42,6 +47,10 @@ namespace api.Business
 
             if (resultado.Inconsistencias.Count == 0)
             {
+                if (!string.IsNullOrWhiteSpace(tenant))
+                {
+                    dadosNavBar.Tenant = tenant.Trim().ToLower();
+                }
                 _context.NavBar.Add(dadosNavBar);
                 _context.SaveChanges();
             }
@@ -49,7 +58,7 @@ namespace api.Business
             return resultado;
         }
 
-        public Resultado Atualizar(NavBar dadosNavBar)
+        public Resultado Atualizar(NavBar dadosNavBar, string tenant = null)
         {
             Resultado resultado = DadosValidos(dadosNavBar);
             resultado.Acao = "Atualização de NavBar";
@@ -69,6 +78,10 @@ namespace api.Business
                 {
                     NavBar.Texto = dadosNavBar.Texto;
                     NavBar.Rota = dadosNavBar.Rota;
+                    if (!string.IsNullOrWhiteSpace(tenant))
+                    {
+                        NavBar.Tenant = tenant.Trim().ToLower();
+                    }
                     _context.SaveChanges();
                 }
             }

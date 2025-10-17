@@ -27,13 +27,18 @@ namespace api.Business
                 return null;
         }
 
-        public IEnumerable<Especialidades> ListarTodos()
+        public IEnumerable<Especialidades> ListarTodos(string tenant = null)
         {
-            return _context.Especialidades
-                .OrderBy(p => p.Lang).ToList();
+            var query = _context.Especialidades.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(tenant))
+            {
+                var t = tenant.Trim().ToLower();
+                query = query.Where(p => p.Tenant == t);
+            }
+            return query.OrderBy(p => p.Lang).ToList();
         }
 
-        public Resultado Incluir(Especialidades dadosEspecialidades)
+        public Resultado Incluir(Especialidades dadosEspecialidades, string tenant = null)
         {
             Resultado resultado = DadosValidos(dadosEspecialidades);
             resultado.Acao = "Inclusão de Especialidades";
@@ -48,6 +53,10 @@ namespace api.Business
 
             if (resultado.Inconsistencias.Count == 0)
             {
+                if (!string.IsNullOrWhiteSpace(tenant))
+                {
+                    dadosEspecialidades.Tenant = tenant.Trim().ToLower();
+                }
                 _context.Especialidades.Add(dadosEspecialidades);
                 _context.SaveChanges();
             }
@@ -55,7 +64,7 @@ namespace api.Business
             return resultado;
         }
 
-        public Resultado Atualizar(Especialidades dadosEspecialidades)
+        public Resultado Atualizar(Especialidades dadosEspecialidades, string tenant = null)
         {
             Resultado resultado = DadosValidos(dadosEspecialidades);
             resultado.Acao = "Atualização de Especialidades";
@@ -76,6 +85,10 @@ namespace api.Business
                     especialidade.Lang = dadosEspecialidades.Lang;
                     especialidade.Img = dadosEspecialidades.Img;
                     especialidade.Desc = dadosEspecialidades.Desc;
+                    if (!string.IsNullOrWhiteSpace(tenant))
+                    {
+                        especialidade.Tenant = tenant.Trim().ToLower();
+                    }
                     _context.SaveChanges();
                 }
             }

@@ -1,0 +1,12 @@
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\bin\Debug\net8.0\Blog.Domain.deps.json
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\bin\Debug\net8.0\Blog.Domain.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\bin\Debug\net8.0\Blog.Domain.pdb
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.AssemblyInfoInputs.cache
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.AssemblyInfo.cs
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.sourcelink.json
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\refint\Blog.Domain.dll
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\Blog.Domain.pdb
+C:\Projetos\Blog\apiblogback\src\Blog.Domain\obj\Debug\net8.0\ref\Blog.Domain.dll

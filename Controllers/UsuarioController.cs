@@ -32,18 +32,21 @@ namespace api.Controllers
                 return NotFound();
         }
 
+        [Authorize]
         [HttpPost]
         public Resultado Post([FromBody] Usuario usuario)
         {
             return _service.Incluir(usuario);
         }
 
+        [Authorize]
         [HttpPut]
         public Resultado Put([FromBody] Usuario usuario)
         {
             return _service.Atualizar(usuario);
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public Resultado Delete(Guid id)
         {

@@ -10,6 +10,8 @@ using api.Models;
 using api.Business;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace api
 {
@@ -26,12 +28,17 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(@"User ID=mmstqvnkhttmqo;Password=993569277af2c9ce7a15faee053b62f3214a8db25d42a325bce70750a0d57fae;Host=
-ec2-54-225-203-79.compute-1.amazonaws.com;Port=5432;Database=d3im0rqgoiqkir;Pooling=true;sslmode=Require;Trust Server Certificate=true;"));
+                options.UseNpgsql(Configuration.GetConnectionString("Default")));
             services.AddScoped<EspecialidadeService>();
             services.AddScoped<TimeLineService>();
             services.AddScoped<NavBarService>();
             services.AddScoped<UsuarioService>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
 
             // var signingConfigurations = new SigningConfigurations();
             // services.AddSingleton(signingConfigurations);
@@ -75,6 +82,28 @@ ec2-54-225-203-79.compute-1.amazonaws.com;Port=5432;Database=d3im0rqgoiqkir;Pool
             //         .RequireAuthenticatedUser().Build());
             // });
 
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidIssuer = Configuration["Jwt:Issuer"],
+                    ValidAudience = Configuration["Jwt:Audience"],
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+            services.AddAuthorization();
+
             services.AddMvc();
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -84,7 +113,8 @@ ec2-54-225-203-79.compute-1.amazonaws.com;Port=5432;Database=d3im0rqgoiqkir;Pool
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("AllowAll");
+            app.UseAuthentication();
             app.UseMvc();
         }
 
