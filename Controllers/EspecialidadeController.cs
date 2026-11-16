@@ -1,54 +1,39 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using api.Business;
 using api.Models;
-using System;
+
 namespace api.Controllers
 {
-    
+    // The public portfolio API is read-only. Administrative writes must only
+    // be reintroduced together with a working authentication/authorization flow.
     [Route("v1/")]
-    public class EspecialidadeController: Controller
+    public class EspecialidadeController : Controller
     {
-        private EspecialidadeService _serviceEspecialidade;
-     
+        private readonly EspecialidadeService _service;
+
         public EspecialidadeController(EspecialidadeService service)
         {
-            _serviceEspecialidade = service;
+            _service = service;
         }
+
         [HttpGet]
         public IEnumerable<Especialidades> Get()
         {
-            return _serviceEspecialidade.ListarTodos();
+            return _service.ListarTodos();
         }
-    
+
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            var espec = _serviceEspecialidade.Obter(id);
-            if (espec != null)
-                return new ObjectResult(espec);
-            else
+            var item = _service.Obter(id);
+            if (item == null)
+            {
                 return NotFound();
-        }
+            }
 
-        [HttpPost]
-        public Resultado Post([FromBody] Especialidades espec)
-        {
-            return _serviceEspecialidade.Incluir(espec);
+            return new ObjectResult(item);
         }
-
-        [HttpPut]
-        public Resultado Put([FromBody] Especialidades espec)
-        {
-            return _serviceEspecialidade.Atualizar(espec);
-        }
-
-        [HttpDelete("{id}")]
-        public Resultado Delete(Guid id)
-        {
-            return _serviceEspecialidade.Excluir(id);
-        }
-
     }
 }
