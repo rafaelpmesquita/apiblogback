@@ -1,54 +1,39 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using api.Business;
 using api.Models;
-using System;
+
 namespace api.Controllers
 {
-    
+    // The public portfolio API is read-only. Administrative writes must only
+    // be reintroduced together with a working authentication/authorization flow.
     [Route("v1/nv")]
-    public class NavBarController: Controller
+    public class NavBarController : Controller
     {
-        private NavBarService _service;
-     
+        private readonly NavBarService _service;
+
         public NavBarController(NavBarService service)
         {
             _service = service;
         }
+
         [HttpGet]
         public IEnumerable<NavBar> Get()
         {
             return _service.ListarTodos();
         }
-    
+
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            var espec = _service.Obter(id);
-            if (espec != null)
-                return new ObjectResult(espec);
-            else
+            var item = _service.Obter(id);
+            if (item == null)
+            {
                 return NotFound();
-        }
+            }
 
-        [HttpPost]
-        public Resultado Post([FromBody] NavBar espec)
-        {
-            return _service.Incluir(espec);
+            return new ObjectResult(item);
         }
-
-        [HttpPut]
-        public Resultado Put([FromBody] NavBar espec)
-        {
-            return _service.Atualizar(espec);
-        }
-
-        [HttpDelete("{id}")]
-        public Resultado Delete(Guid id)
-        {
-            return _service.Excluir(id);
-        }
-
     }
 }

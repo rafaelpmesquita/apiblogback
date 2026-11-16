@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace api
 {
@@ -14,6 +9,15 @@ namespace api
     {
         public static void Main(string[] args)
         {
+            // Load .env only when it exists (local development).
+            // Production should inject ConnectionStrings__DefaultConnection
+            // as an environment variable from the hosting/deployment platform.
+            var envFile = Path.Combine(Directory.GetCurrentDirectory(), ".env");
+            if (File.Exists(envFile))
+            {
+                DotNetEnv.Env.Load(envFile);
+            }
+
             BuildWebHost(args).Run();
         }
 
